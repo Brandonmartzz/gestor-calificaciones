@@ -6,7 +6,7 @@ alumnos = {}  # nombre -> lista de calificaciones
 
 def validar_calificacion(valor):
     """RF1: acepta números de 0 a 10."""
-    if not isinstance(valor, (int, float)):
+    if isinstance(valor, bool) or not isinstance(valor, (int, float)):
         raise TypeError("La calificación debe ser numérica")
     if valor < 0 or valor > 10:
         raise ValueError("La calificación debe estar entre 0 y 10")
